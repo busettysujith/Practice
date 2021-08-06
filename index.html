@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="newModule">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: {{color}};
+    }
+  </style>  
+
+</head>
+
+<body>
+
+  <input type="text" ng-model="color" name="" id="" placeholder="enter color name"><br>
+  <div ng-init=" state='AP' ; surname='language';  Name='Telugu';">
+    {{state}} {{surname}} {{Name}}
+  </div><br>
+
+  <div ng-init="details=['name' , 'age' , 'city']">
+    <p ng-repeat="detail in details">{{detail}}</p>
+  </div>
+
+  <div ng-controller="myController">
+    <input type="text" ng-model="name" name="">
+    <input type="text" ng-model="city" name="">
+    <br>
+    {{ name }}
+    <br>
+    {{ city }}
+
+    <p>
+      {{details()}}
+    </p>
+  </div><br>
+
+  <div>
+    {{name}}
+  </div>
+
+ 
+
+
+  <script src="./angular.min.js"></script>
+  <script src="./angular-route.min.js"></script>
+  <script src="./controller.js"></script> 
+</body>
+
+</html>
